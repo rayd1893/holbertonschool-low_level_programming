@@ -4,16 +4,17 @@
 /**
  * main - Main function
  *
- * Return: Print a message with putchar
+ * Return: Print a message without printf or puts
  */
 int main(void)
 {
-	char texto[100]  = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int longitud = strlen(texto);
+	char t[70] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int longitud = strlen(t);
 	int i = 0;
-	while(i < longitud)
+
+	while (i < longitud)
 	{
-		putchar(texto[i]);	
+		putchar(t[i]);
 		i++;
 	}
 
