@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <limits.h>
 
 /**
  * print_last_digit - Last digit
@@ -16,6 +17,11 @@ int print_last_digit(int n)
 	}
 
 	last = n % 10;
+
+	if (n == INT_MIN)
+	{
+		last = 8;
+	}
 
 	_putchar(last + '0');
 	return (last);
