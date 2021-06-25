@@ -28,7 +28,7 @@ void  more_numbers(void)
 				dec = j / 10;
 			}
 
-			if (j > 10)
+			if (j >= 10)
 			{
 				_putchar('0' + dec);
 			}
