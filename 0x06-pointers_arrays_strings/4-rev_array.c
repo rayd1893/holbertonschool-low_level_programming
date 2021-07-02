@@ -2,7 +2,7 @@
  * reverse_array - Print array in reverse
  * @a: array
  * @n: size of array
- * 
+ *
  * Return: Array in reverse
  */
 void reverse_array(int *a, int n)
