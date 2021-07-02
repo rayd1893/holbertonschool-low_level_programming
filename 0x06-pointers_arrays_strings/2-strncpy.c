@@ -1,5 +1,5 @@
 /**
- * _strncat - Concatenate strings
+ * _strncpy - Copy string
  * @dest: First string
  * @src: Second string
  * @n: bytes
