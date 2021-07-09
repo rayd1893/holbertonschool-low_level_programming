@@ -1,5 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
+/**
+ * isnumber - Validate number
+ * @s: String
+ * Return: 1 is number else 0
+ */
+int isnumber(char *s)
+{
+	while (*s)
+	{
+		if (!isdigit(*s))
+		{
+			return (0);
+		}
+		s++;
+	}
+
+	return (1);
+}
 
 /**
  * change - Number of coins
@@ -47,6 +67,12 @@ int main(int argc, char **argv)
 	{
 		printf("Error\n");
 		exit(EXIT_FAILURE);
+	}
+
+	if (!isnumber(argv[1]))
+	{
+		printf("%d\n", 0);
+		exit(EXIT_SUCCESS);
 	}
 
 	c = change(atoi(argv[1]));
