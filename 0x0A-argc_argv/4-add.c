@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	while (argc--)
 	{
-		if (atoi(*argv) == 0)
+		if (atoi(*argv) == 0 && **argv != 48)
 		{
 			printf("Error\n");
 			return (1);
