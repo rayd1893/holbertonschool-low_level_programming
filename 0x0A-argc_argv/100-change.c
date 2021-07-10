@@ -46,7 +46,7 @@ int change(int amount)
 
 	for (i = 0; i < 5; i++)
 	{
-		while (!(amount % values[i]))
+		while (amount >= values[i])
 		{
 			amount -= values[i];
 			coins++;
