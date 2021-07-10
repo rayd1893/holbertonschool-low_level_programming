@@ -9,13 +9,20 @@
  */
 int isnumber(char *s)
 {
-	while (*s)
+	int i = 0;
+
+	if (s[0] == '-')
 	{
-		if (!isdigit(*s))
+		i = 1;
+	}
+
+	while (s[i])
+	{
+		if (!isdigit(s[i]))
 		{
 			return (0);
 		}
-		s++;
+		i++;
 	}
 
 	return (1);
@@ -70,6 +77,12 @@ int main(int argc, char **argv)
 	}
 
 	if (!isnumber(argv[1]))
+	{
+		printf("Error\n");
+		exit(EXIT_FAILURE);
+	}
+
+	if (atoi(argv[1]) <= 0)
 	{
 		printf("%d\n", 0);
 		exit(EXIT_SUCCESS);
