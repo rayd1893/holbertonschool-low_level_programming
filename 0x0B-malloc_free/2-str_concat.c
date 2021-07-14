@@ -36,9 +36,6 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 	int j = 0;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-
 	concat = malloc(len + 1);
 
 	if (concat == NULL)
@@ -55,9 +52,6 @@ char *str_concat(char *s1, char *s2)
 		*(concat + i + j) = *(s2 + j);
 		j++;
 	}
-
-	if (concat == NULL)
-		return (NULL);
 
 	return (concat);
 
