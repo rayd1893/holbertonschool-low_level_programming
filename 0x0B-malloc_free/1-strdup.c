@@ -15,7 +15,7 @@ int _strlen(char *s)
 		return (0);
 	}
 
-	while (*s)
+	while (s[i] != '\0')
 	{
 		i++;
 	}
@@ -47,7 +47,7 @@ char *_strdup(char *str)
 
 	while (i < _strlen(str))
 	{
-		t[i] = str[i];
+		*(t + i) = *(str + i);
 		i++;
 	}
 
