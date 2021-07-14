@@ -52,6 +52,8 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 
+	i--;
+
 	while (j < _strlen(s2))
 	{
 		*(concat + i + j) = *(s2 + j);
