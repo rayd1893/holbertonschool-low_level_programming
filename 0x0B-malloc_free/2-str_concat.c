@@ -41,6 +41,9 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 	}
 
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+
 	concat = malloc(len + 1);
 
 	while (i < _strlen(s1))
