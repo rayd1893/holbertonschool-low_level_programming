@@ -1,17 +1,4 @@
-/**
- * struct dog - Create struct dog
- * @name: Dog´s name
- * @age: Dog´s age
- * @owner: Dog´s owner
- *
- * Description: Create a struct called dog
- */
-struct dog
-{
-	char *name;
-	float age;
-	char *owner;
-};
+#include "dog.h"
 
 /**
  * init_dog - To start struct
