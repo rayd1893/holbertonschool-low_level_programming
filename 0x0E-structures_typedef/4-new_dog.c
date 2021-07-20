@@ -1,6 +1,14 @@
 #include "dog.h"
 #include <stdlib.h>
 
+/**
+ * new_dog - Create new dog
+ * @name: Dog´s name
+ * @age: Dog´s age
+ * @owner: Dog´s owner
+ *
+ * Return: Struct dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
         dog_t *my_dog = malloc(sizeof(*my_dog));
