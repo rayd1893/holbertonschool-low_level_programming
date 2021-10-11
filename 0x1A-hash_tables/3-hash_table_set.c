@@ -10,10 +10,10 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *node;
-	hash_node_t *new;
-	char *n_value;
-	char *n_key;
+	hash_node_t *node = NULL;
+	hash_node_t *new = NULL;
+	char *n_value = NULL;
+	char *n_key = NULL;
 	unsigned long int index = key_index((unsigned char *) key, ht->size);
 
 	if (!ht || !key || !(ht->array))
