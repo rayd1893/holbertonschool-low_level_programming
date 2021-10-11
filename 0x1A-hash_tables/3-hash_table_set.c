@@ -14,11 +14,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new = NULL;
 	char *n_value = NULL;
 	char *n_key = NULL;
-	unsigned long int index = key_index((unsigned char *) key, ht->size);
+	unsigned long int index = 0;
 
 	if (!ht || !key || !(ht->array))
 		return (0);
 
+	index = key_index((unsigned char *) key, ht->size);
 	n_value = strdup(value);
 	node = ht->array[index];
 
