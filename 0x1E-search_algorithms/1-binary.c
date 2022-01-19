@@ -36,18 +36,22 @@ int binary_search(int *array, size_t size, int value)
 
 	l = 0;
 	r = size;
-	while (l <= r && l < size)
+	while (l != r && l < size - 1)
 	{
 		print_array(array, l, r);
-		m = (l + r) / 2;
+		if ((l + r) % 2 == 0)
+			m = (l + r) / 2;
+		else
+			m = ((l + r) / 2) + 1;
 
-		if (array[m] < value)
-			l = m + 1;
-		else if (array[m] > value)
+		if (array[m] > value)
 			r = m - 1;
 		else
-			return (m);
+			l = m;
 	}
+
+	if (array[l] == value)
+		return (l);
 
 	return (-1);
 }
